@@ -5,14 +5,14 @@ export const baseColors = {
   primary: "#884024",
   primaryBright: "#EBA050ff",
   primaryDark: "#0098A1",
-  secondary: "#EA9D4E",
+  secondary: "#441F95",
   success: "#EBA050ff",
   warning: "#E49242",
 };
 
 export const additionalColors = {
   binance: "#F0B90B",
-  overlay: "#EA9D4E",
+  overlay: "#441F95",
   gold: "#FFFFC7ff",
   silver: "#B2B2B2",
   bronze: "#E66159ff",
@@ -33,7 +33,7 @@ export const lightColors: Colors = {
   input: "#eeeaf4",
   inputSecondary: "#d7caec",
   tertiary: "#EFF4F5",
-  text: "#0D0D0D",
+  text: "#441F95",
   textDisabled: "#CD6515",
   textSubtle: "#000000",
   disabled: "#E9EAEB",
