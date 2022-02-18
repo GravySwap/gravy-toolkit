@@ -4,9 +4,10 @@ import { SvgProps } from "../types";
 
 interface LogoProps extends SvgProps {
   isDark: boolean;
+  fontColor: string;
 }
 
-const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
+const Logo: React.FC<LogoProps> = ({ isDark, fontColor, ...props }) => {
   const textColor = isDark ? "#FFFFFF" : "#000000";
   return (
     <svg
@@ -45,7 +46,7 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
           fontSize={25}
           fontWeight={800}
           letterSpacing={-0.694}
-          fill="#441F95"
+          fill={fontColor ?? '#441F95'}
         >
           <tspan x={51} y={26}>
             GravySwap
