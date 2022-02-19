@@ -41,6 +41,7 @@ export * from "./components/Toggle";
 export * from "./hooks";
 
 // Widgets
+export { MenuSlide } from "./widgets/SlideMenu"
 export * from "./widgets/Modal";
 export * from "./widgets/Menu";
 export * from "./widgets/WalletModal";
