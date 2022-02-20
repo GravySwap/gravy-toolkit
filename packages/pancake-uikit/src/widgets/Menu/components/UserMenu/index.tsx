@@ -2,20 +2,19 @@ import React, { useEffect, useState } from "react";
 import { usePopper } from "react-popper";
 import styled from "styled-components";
 import { Box, Flex } from "../../../../components/Box";
-import { ChevronDownIcon } from "../../../../components/Svg";
+import { ChevronDownIcon, ArrowDropDownIcon } from "../../../../components/Svg";
 import { UserMenuProps, variants } from "./types";
 import MenuIcon from "./MenuIcon";
 import { UserMenuItem } from "./styles";
 
 export const StyledUserMenu = styled(Flex)`
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.tertiary};
-  border-radius: 16px;
+  background-color: ${({ theme }) => theme.colors.text};
+  border-radius: 25px;
   box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   display: inline-flex;
-  height: 32px;
-  padding-left: 40px;
+  height: 45px;
   padding-right: 8px;
   position: relative;
 
@@ -25,7 +24,8 @@ export const StyledUserMenu = styled(Flex)`
 `;
 
 export const LabelText = styled.div`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.backgroundAlt};
+  text-transform: uppercase;
   display: none;
   font-weight: 600;
 
@@ -38,7 +38,7 @@ export const LabelText = styled.div`
 
 const Menu = styled.div<{ isOpen: boolean }>`
   background-color: ${({ theme }) => theme.card.background};
-  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  border: 1px solid ${({ theme }) => theme.colors.textSubtle};
   border-radius: 16px;
   padding-bottom: 4px;
   padding-top: 4px;
@@ -63,12 +63,17 @@ const Menu = styled.div<{ isOpen: boolean }>`
   }
 `;
 
+const Img = styled.img`
+  padding: 0 15px;
+`
+
 const UserMenu: React.FC<UserMenuProps> = ({
   account,
   text,
   avatarSrc,
   variant = variants.DEFAULT,
   children,
+  srcImage,
   ...props
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -110,9 +115,11 @@ const UserMenu: React.FC<UserMenuProps> = ({
           setIsOpen((s) => !s);
         }}
       >
-        <MenuIcon avatarSrc={avatarSrc} variant={variant} />
+        {srcImage && (
+          <Img src={srcImage} alt="Gravy" />
+        )}
         <LabelText title={text || account}>{text || accountEllipsis}</LabelText>
-        <ChevronDownIcon color="text" width="24px" />
+        <ArrowDropDownIcon color="backgroundAlt" width="24px" />
       </StyledUserMenu>
       <Menu style={styles.popper} ref={setTooltipRef} {...attributes.popper} isOpen={isOpen}>
         <Box onClick={() => setIsOpen(false)}>{children}</Box>
