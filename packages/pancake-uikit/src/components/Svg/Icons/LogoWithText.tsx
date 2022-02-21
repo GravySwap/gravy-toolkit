@@ -1,10 +1,15 @@
 import React from "react";
+import styled from 'styled-components'
 import Svg from "../Svg";
 import { SvgProps } from "../types";
 
 interface LogoProps extends SvgProps {
   isDark: boolean;
 }
+
+const Text = styled.text`
+  font-weight: 900;
+`
 
 const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
   const textColor = isDark ? "#FFFFFF" : "#441F95";
@@ -40,7 +45,7 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
           d="M4.06 8.604C5.415 5.568 9.627-.329 20.969.014c12.566.37 16.535 8.872 16.865 10.729.26 1.452-4.386-1.725-5.819.897-1.441 2.623.817 3.802-.147 5.642-.452.862-2.102 1.073-3.031-.414-.669-1.065.304-1.787-.408-2.922-.522-.836-1.72-1.734-3.005-1.866-2.206-.22-4.264 2.051-3.821 4.498.443 2.446-.27 5.614-2.666 5.271-2.397-.343-1.876-2.966-.982-5.984.825-2.781-3.456-6.266-6.183-5.835-3.144.501-2.545 3.582-5.028 4.119-2.223.475-3.874-2.878-2.684-5.545"
           fill="#DA822C"
         />
-        <text
+        <Text
           fontFamily="Nunito-Black, Nunito"
           fontSize={25}
           fontWeight={800}
@@ -50,7 +55,7 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
           <tspan x={51} y={26}>
             GravySwap
           </tspan>
-        </text>
+        </Text>
       </g>
     </svg>
   );
