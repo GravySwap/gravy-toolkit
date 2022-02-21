@@ -23,7 +23,7 @@ export const styleVariants = {
     color: "white",
   },
   [variants.SECONDARY]: {
-    backgrploundColor: "transparent",
+    backgroundColor: "backgroundAlt",
     border: "4px solid",
     borderColor: "primary",
     boxShadow: "none",
