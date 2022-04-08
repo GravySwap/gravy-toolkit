@@ -80,7 +80,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
           </Text>
           <Button
             as="a"
-            href="https://docs.pancakeswap.finance/get-started/connection-guide"
+            href="https://gravyswap-1.gitbook.io/gravyswap-1/getting-started/gravyswap-without-centralized-exchanges/connect-your-wallet-to-gravyswap"
             variant="subtle"
             width="100%"
             {...getExternalLinkProps()}

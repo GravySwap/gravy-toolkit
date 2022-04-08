@@ -2,17 +2,17 @@ import { Colors } from "./types";
 
 export const baseColors = {
   failure: "#E66159ff",
-  primary: "#f19e31",
+  primary: "#884024",
   primaryBright: "#EBA050ff",
   primaryDark: "#0098A1",
-  secondary: "#EA9D4E",
+  secondary: "#441F95",
   success: "#EBA050ff",
   warning: "#E49242",
 };
 
 export const additionalColors = {
   binance: "#F0B90B",
-  overlay: "#EA9D4E",
+  overlay: "#441F95",
   gold: "#FFFFC7ff",
   silver: "#B2B2B2",
   bronze: "#E66159ff",
@@ -33,12 +33,12 @@ export const lightColors: Colors = {
   input: "#eeeaf4",
   inputSecondary: "#d7caec",
   tertiary: "#EFF4F5",
-  text: "#0D0D0D",
+  text: "#441F95",
   textDisabled: "#CD6515",
   textSubtle: "#000000",
   disabled: "#E9EAEB",
   gradients: {
-    bubblegum: "linear-gradient(139.73deg, #E5FDFF 0%, #F3EFFF 100%)",
+    bubblegum: "#F1E7EB",
     inverseBubblegum: "linear-gradient(139.73deg, #F3EFFF 0%, #E5FDFF 100%)",
     cardHeader: "linear-gradient(111.68deg, #F2ECF2 0%, #E8F2F6 100%)",
     blue: "linear-gradient(180deg, #A7E8F1 0%, #94E1F2 100%)",
